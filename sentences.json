@@ -1,0 +1,987 @@
+[
+  {
+    "id": 1,
+    "text": "Okula giderken arkadaşımı gördüm.",
+    "gerunds": [
+      {
+        "word": "giderken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Yürüyüş yapmayı seviyorum.",
+    "gerunds": [
+      {
+        "word": "yapmayı",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "Yürüyüş",
+        "type": "İsim-fiil",
+        "suffix": "-üş"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Okuduğum kitap çok ilginçti.",
+    "gerunds": [
+      {
+        "word": "okuduğum",
+        "type": "Sıfat-fiil",
+        "suffix": "-dık"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Koşarak gelen çocuk, nefes nefese kalmış bir halde durdu.",
+    "gerunds": [
+      {
+        "word": "koşarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "gelen",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Ödevini bitirmiş olduğunu söyleyen öğrenci, sınıftan ayrıldı.",
+    "gerunds": [
+      {
+        "word": "bitirmiş",
+        "type": "Sıfat-fiil",
+        "suffix": "-miş"
+      },
+      {
+        "word": "olduğunu",
+        "type": "Sıfat-fiil",
+        "suffix": "-dık"
+      },
+      {
+        "word": "söyleyen",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Yemek yaparken müzik dinlemeyi seven annem, mutfakta çok vakit geçirir.",
+    "gerunds": [
+      {
+        "word": "yaparken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "dinlemeyi",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      },
+      {
+        "word": "seven",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Ağaçların arasından geçerek ilerleyen patikada yürümek, beni rahatlatıyor.",
+    "gerunds": [
+      {
+        "word": "geçerek",
+        "type": "Zarf-fiil",
+        "suffix": "-erek"
+      },
+      {
+        "word": "ilerleyen",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "yürümek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Sabah erkenden kalkıp kahvaltı hazırlamayı alışkanlık haline getirmiş olan babam, herkesi sofrada beklerdi.",
+    "gerunds": [
+      {
+        "word": "kalkıp",
+        "type": "Zarf-fiil",
+        "suffix": "-ıp"
+      },
+      {
+        "word": "hazırlamayı",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "getirmiş",
+        "type": "Sıfat-fiil",
+        "suffix": "-miş"
+      },
+      {
+        "word": "olan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Kitap okumayı seven, bilgisayar oyunları oynamaktan hoşlanan ve spor yapmaya bayılan bir çocuktu.",
+    "gerunds": [
+      {
+        "word": "okumayı",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "seven",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "oynamaktan",
+        "type": "İsim-fiil",
+        "suffix": "-mak"
+      },
+      {
+        "word": "hoşlanan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "yapmaya",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "bayılan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Dün akşam izlediğimiz filmin konusunu anlamakta zorlanan arkadaşıma, tekrar izlemeyi önerdim.",
+    "gerunds": [
+      {
+        "word": "izlediğimiz",
+        "type": "Sıfat-fiil",
+        "suffix": "-dık"
+      },
+      {
+        "word": "anlamakta",
+        "type": "İsim-fiil",
+        "suffix": "-mak"
+      },
+      {
+        "word": "zorlanan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "izlemeyi",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Yağmur yağarken pencereden dışarı bakmayı seven küçük kız, bulutların dağılmasını sabırsızlıkla bekliyordu.",
+    "gerunds": [
+      {
+        "word": "yağarken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "bakmayı",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "seven",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "dağılmasını",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Arkadaşlarıyla buluşmadan önce alışveriş yapmak için çarşıya giden Ayşe, yolda karşılaştığı komşusuyla sohbet etti.",
+    "gerunds": [
+      {
+        "word": "buluşmadan",
+        "type": "Zarf-fiil",
+        "suffix": "-madan"
+      },
+      {
+        "word": "yapmak",
+        "type": "İsim-fiil",
+        "suffix": "-mak"
+      },
+      {
+        "word": "giden",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "karşılaştığı",
+        "type": "Sıfat-fiil",
+        "suffix": "-dık"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Sabahları erken kalkıp koşu yaparak güne başlayan Ahmet, işe gitmeden önce duş almayı ihmal etmezdi.",
+    "gerunds": [
+      {
+        "word": "kalkıp",
+        "type": "Zarf-fiil",
+        "suffix": "-ıp"
+      },
+      {
+        "word": "yaparak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "başlayan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "gitmeden",
+        "type": "Zarf-fiil",
+        "suffix": "-meden"
+      },
+      {
+        "word": "almayı",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Yeni bir dil öğrenmeye karar veren Mehmet, her gün düzenli olarak çalışarak kısa sürede ilerleme kaydetti.",
+    "gerunds": [
+      {
+        "word": "öğrenmeye",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      },
+      {
+        "word": "veren",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "çalışarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Uzun zamandır görmediği arkadaşıyla karşılaşınca heyecanlanan Zeynep, onu yemeğe davet etmeyi düşündü.",
+    "gerunds": [
+      {
+        "word": "görmediği",
+        "type": "Sıfat-fiil",
+        "suffix": "-dık"
+      },
+      {
+        "word": "karşılaşınca",
+        "type": "Zarf-fiil",
+        "suffix": "-ınca"
+      },
+      {
+        "word": "heyecanlanan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "etmeyi",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Kitap okumayı seven, müzik dinlemeye bayılan ve resim yapmaktan hoşlanan Elif, boş zamanlarını değerlendirmeyi iyi bilirdi.",
+    "gerunds": [
+      {
+        "word": "okumayı",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "seven",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "dinlemeye",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      },
+      {
+        "word": "yapmaktan",
+        "type": "İsim-fiil",
+        "suffix": "-mak"
+      },
+      {
+        "word": "hoşlanan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "değerlendirmeyi",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Sınavdan çıkan öğrenciler, sonuçları öğrenmek için sabırsızlanarak öğretmenlerinin açıklama yapmasını bekliyorlardı.",
+    "gerunds": [
+      {
+        "word": "çıkan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "öğrenmek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      },
+      {
+        "word": "sabırsızlanarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "yapmasını",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Yeni taşındığı semti keşfetmek için sokak sokak dolaşan Emre, ilginç yerler bulup fotoğraf çekmeyi çok seviyordu.",
+    "gerunds": [
+      {
+        "word": "taşındığı",
+        "type": "Sıfat-fiil",
+        "suffix": "-dık"
+      },
+      {
+        "word": "keşfetmek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      },
+      {
+        "word": "dolaşan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "bulup",
+        "type": "Zarf-fiil",
+        "suffix": "-ıp"
+      },
+      {
+        "word": "çekmeyi",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Arkadaşlarıyla piknik yapmaya giden Ayşe, yanına aldığı kitabı okuyarak ve müzik dinleyerek güzel bir gün geçirdi.",
+    "gerunds": [
+      {
+        "word": "yapmaya",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "giden",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "aldığı",
+        "type": "Sıfat-fiil",
+        "suffix": "-dık"
+      },
+      {
+        "word": "okuyarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "dinleyerek",
+        "type": "Zarf-fiil",
+        "suffix": "-erek"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Yeni bir proje üzerinde çalışmaya başlayan ekip, farklı fikirleri değerlendirerek ve tartışarak en iyi çözümü bulmaya çalışıyordu.",
+    "gerunds": [
+      {
+        "word": "çalışmaya",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "başlayan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "değerlendirerek",
+        "type": "Zarf-fiil",
+        "suffix": "-erek"
+      },
+      {
+        "word": "tartışarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "bulmaya",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Sınavlardan düşük not alınca çalışmaya karar veren öğrenciler, bu kez daha dikkatli bir şekilde ders çalışarak başarılı olmak istiyorlardı.",
+    "gerunds": [
+      {
+        "word": "alınca",
+        "type": "Zarf-fiil",
+        "suffix": "-ınca"
+      },
+      {
+        "word": "çalışmaya",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "veren",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "çalışarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "olmak",
+        "type": "İsim-fiil",
+        "suffix": "-mak"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Yaz tatilinde deniz kenarında kamp yaparak dinlenmek isteyen aile, ormanın içinden geçip sahile ulaştı.",
+    "gerunds": [
+      {
+        "word": "yaparak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "dinlenmek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      },
+      {
+        "word": "isteyen",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "geçip",
+        "type": "Zarf-fiil",
+        "suffix": "-ip"
+      },
+      {
+        "word": "ulaştı",
+        "type": "İsim-fiil",
+        "suffix": "-tı"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Eski fotoğrafları karıştırırken bulduğu mektubu okuyarak geçmişi hatırlayan kadın, gözyaşlarına hakim olamadı.",
+    "gerunds": [
+      {
+        "word": "karıştırırken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "bulduğu",
+        "type": "Sıfat-fiil",
+        "suffix": "-dık"
+      },
+      {
+        "word": "okuyarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "hatırlayan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Öğle yemeğini yedikten sonra parka gidip kitap okumayı seven çocuk, her gün aynı rutinle zaman geçirirdi.",
+    "gerunds": [
+      {
+        "word": "yedikten",
+        "type": "Zarf-fiil",
+        "suffix": "-dikten"
+      },
+      {
+        "word": "gidip",
+        "type": "Zarf-fiil",
+        "suffix": "-ip"
+      },
+      {
+        "word": "okumayı",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "seven",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Güneşin batmasını izleyerek sahilde yürüyen çift, denizin sesini dinleyerek huzur buluyordu.",
+    "gerunds": [
+      {
+        "word": "batmasını",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "izleyerek",
+        "type": "Zarf-fiil",
+        "suffix": "-erek"
+      },
+      {
+        "word": "yürüyen",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "dinleyerek",
+        "type": "Zarf-fiil",
+        "suffix": "-erek"
+      },
+      {
+        "word": "buluyordu",
+        "type": "İsim-fiil",
+        "suffix": "-ordu"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Yağmur yağdığında pencereden dışarı bakarak gökyüzünü seyreden adam, düşüncelere dalıp uzaklara gitti.",
+    "gerunds": [
+      {
+        "word": "yağdığında",
+        "type": "Zarf-fiil",
+        "suffix": "-dığında"
+      },
+      {
+        "word": "bakarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "seyreden",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "dalıp",
+        "type": "Zarf-fiil",
+        "suffix": "-ıp"
+      },
+      {
+        "word": "gitti",
+        "type": "İsim-fiil",
+        "suffix": "-tti"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Bahçede çiçekleri sularken telefon çaldı ve Ali, elindeki hortumu bırakarak eve koştu.",
+    "gerunds": [
+      {
+        "word": "sularken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "bırakarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "koştu",
+        "type": "İsim-fiil",
+        "suffix": "-tu"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Kitap okurken dinlediği müzikle rahatlayan kız, odasında uzun saatler geçirdi.",
+    "gerunds": [
+      {
+        "word": "okurken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "dinlediği",
+        "type": "Sıfat-fiil",
+        "suffix": "-dik"
+      },
+      {
+        "word": "rahatlayan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Okuldan dönerken arkadaşlarını görüp selam veren çocuk, eve geç kalmamak için hızla yürümeye başladı.",
+    "gerunds": [
+      {
+        "word": "dönerken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "verip",
+        "type": "Zarf-fiil",
+        "suffix": "-ip"
+      },
+      {
+        "word": "kalmamak",
+        "type": "İsim-fiil",
+        "suffix": "-ma"
+      },
+      {
+        "word": "yürümeye",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Sabah erkenden kalkıp yürüyüşe çıkan adam, yol boyunca gördüğü her çiçeği dikkatle inceledi.",
+    "gerunds": [
+      {
+        "word": "kalkıp",
+        "type": "Zarf-fiil",
+        "suffix": "-ıp"
+      },
+      {
+        "word": "çıkan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "gördüğü",
+        "type": "Sıfat-fiil",
+        "suffix": "-dük"
+      },
+      {
+        "word": "inceledi",
+        "type": "İsim-fiil",
+        "suffix": "-di"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Akşam yemeği yaparken bir yandan da çocuklarıyla oyun oynayan anne, evdeki işleri bitirmek için acele ediyordu.",
+    "gerunds": [
+      {
+        "word": "yaparken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "oynayan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "bitirmek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      },
+      {
+        "word": "ediyordu",
+        "type": "İsim-fiil",
+        "suffix": "-ordu"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Kitapçıda yeni çıkan romanı inceleyip beğenen Ahmet, hemen satın aldı.",
+    "gerunds": [
+      {
+        "word": "çıkan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "inceleyip",
+        "type": "Zarf-fiil",
+        "suffix": "-ip"
+      },
+      {
+        "word": "beğenen",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Güne erken başlayarak işlerini bitiren kadın, kalan vaktini dinlenmek için değerlendirdi.",
+    "gerunds": [
+      {
+        "word": "başlayarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "bitiren",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "dinlenmek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Yeni aldığı kitabı okuyarak öğrenmek isteyen öğrenci, her gün düzenli olarak okuma saati ayırıyordu.",
+    "gerunds": [
+      {
+        "word": "okuyarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "öğrenmek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      },
+      {
+        "word": "isteyen",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Dağa tırmanırken nefes nefese kalan genç, zirveye ulaşmak için tüm gücünü kullanıyordu.",
+    "gerunds": [
+      {
+        "word": "tırmanırken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "kalan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "ulaşmak",
+        "type": "İsim-fiil",
+        "suffix": "-mak"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Hızla akan nehirdeki balıkları izlerken düşüncelere dalan çocuk, zamanın nasıl geçtiğini fark etmedi.",
+    "gerunds": [
+      {
+        "word": "akan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "izlerken",
+        "type": "Zarf-fiil",
+        "suffix": "-ken"
+      },
+      {
+        "word": "düşüncelere",
+        "type": "İsim-fiil",
+        "suffix": "-e"
+      },
+      {
+        "word": "daldı",
+        "type": "İsim-fiil",
+        "suffix": "-dı"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Yemek yapmayı öğrenmek için mutfakta vakit geçiren genç, farklı tarifler deneyerek yemek yapma becerilerini geliştirdi.",
+    "gerunds": [
+      {
+        "word": "öğrenmek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      },
+      {
+        "word": "geçiren",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "deneyerek",
+        "type": "Zarf-fiil",
+        "suffix": "-erek"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Kitapçıda yeni çıkan kitabı alıp okuyan kadın, yazarın tarzını çok beğendi.",
+    "gerunds": [
+      {
+        "word": "çıkan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      },
+      {
+        "word": "alıp",
+        "type": "Zarf-fiil",
+        "suffix": "-ıp"
+      },
+      {
+        "word": "okuyan",
+        "type": "Sıfat-fiil",
+        "suffix": "-an"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Sabah kalkıp spor yaparak güne başlamak, onun için bir alışkanlık haline gelmişti.",
+    "gerunds": [
+      {
+        "word": "kalkıp",
+        "type": "Zarf-fiil",
+        "suffix": "-ıp"
+      },
+      {
+        "word": "yaparak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "başlamak",
+        "type": "İsim-fiil",
+        "suffix": "-mak"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Yeni bir dil öğrenmek için kursa giden adam, düzenli çalışarak kısa sürede büyük ilerleme kaydetti.",
+    "gerunds": [
+      {
+        "word": "öğrenmek",
+        "type": "İsim-fiil",
+        "suffix": "-mek"
+      },
+      {
+        "word": "giden",
+        "type": "Sıfat-fiil",
+        "suffix": "-en"
+      },
+      {
+        "word": "çalışarak",
+        "type": "Zarf-fiil",
+        "suffix": "-arak"
+      },
+      {
+        "word": "ilerleme",
+        "type": "İsim-fiil",
+        "suffix": "-me"
+      }
+    ]
+  }
+]

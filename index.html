@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkçe Fiilimsi Uygulaması</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+            transform: perspective(1000px) rotateX(5deg);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: perspective(1000px) rotateX(0deg);
+        }
+        h1 {
+            color: #e63946;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        #sentenceDisplay {
+            background-color: #f1faee;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #c1121f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        #sentenceForm {
+            margin-top: 20px;
+            display: none;
+        }
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .word {
+            cursor: pointer;
+            color: black;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            animation: popupAppear 0.3s ease-out;
+        }
+        @keyframes popupAppear {
+            from { opacity: 0; transform: translate(-50%, -60%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .popup-content {
+            text-align: center;
+        }
+        .popup-button {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #e63946;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .popup-button:hover {
+            background-color: #c1121f;
+        }
+        .gerund-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .gerund-info div {
+            background-color: #f8d7da;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #deleteConfirmPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            text-align: center;
+        }
+        #deleteConfirmPopup h2 {
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+        #deleteConfirmPopup button {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Türkçe Fiilimsi Uygulaması</h1>
+        <div id="sentenceDisplay"></div>
+        <div class="button-container">
+            <button onclick="showPreviousSentence()">Önceki</button>
+            <button onclick="showNextSentence()">Sonraki</button>
+        </div>
+        <div class="button-container">
+            <button onclick="toggleSentenceForm('add')">+</button>
+            <button onclick="toggleSentenceForm('edit')">✎</button>
+            <button onclick="showDeleteConfirm()">🗑️</button>
+            <button onclick="exportSentences()">Cümleleri Dışa Aktar</button>
+            <input type="file" id="importFile" style="display: none;" onchange="importSentences(event)">
+            <button onclick="document.getElementById('importFile').click()">Cümleleri İçe Aktar</button>
+        </div>
+        <div id="sentenceForm">
+            <textarea id="sentenceText" placeholder="Cümle"></textarea>
+            <div id="gerundInputs">
+                <div class="gerund-input">
+                    <input type="text" class="gerundWord" placeholder="Fiilimsi sözcüğü">
+                    <input type="text" class="gerundType" placeholder="Fiilimsi türü">
+                    <input type="text" class="gerundSuffix" placeholder="Fiilimsi eki">
+                    <button onclick="removeGerundInput(this)" class="remove-gerund">Kaldır</button>
+                </div>
+            </div>
+            <button onclick="addGerundInput()">Fiilimsi Ekle</button>
+            <button id="formSubmitButton" onclick="submitSentenceForm()">Ekle</button>
+            <button onclick="toggleSentenceForm()">İptal</button>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popupMessage"></p>
+            <div id="gerundInfo" class="gerund-info"></div>
+            <button class="popup-button" onclick="closePopup()">Kapat</button>
+        </div>
+    </div>
+
+    <div id="deleteConfirmPopup">
+        <h2>Dikkat!</h2>
+        <p>Bu cümleyi silmek istediğinizden emin misiniz?</p>
+        <button onclick="deleteSentence()">Evet, Sil</button>
+        <button onclick="closeDeleteConfirm()">İptal</button>
+    </div>
+<script>
+        let sentences = [];
+        let currentSentenceIndex = 0;
+        let formMode = 'add';
+
+        // Sayfa yüklendiğinde sentences.json dosyasını yükle
+        async function loadSentences() {
+            try {
+                const response = await fetch('sentences.json');
+                if (!response.ok) {
+                    throw new Error('Sentences.json dosyası yüklenemedi');
+                }
+                sentences = await response.json();
+                showSentence();
+            } catch (error) {
+                console.error('Veri yükleme hatası:', error);
+                sentences = [];
+                document.getElementById('sentenceDisplay').innerHTML = "sentences.json dosyası bulunamadı veya yüklenemedi.";
+            }
+        }
+
+        function showSentence() {
+            const sentenceDisplay = document.getElementById('sentenceDisplay');
+            if (sentences.length === 0) {
+                sentenceDisplay.innerHTML = "Henüz cümle eklenmemiş.";
+                return;
+            }
+            const currentSentence = sentences[currentSentenceIndex];
+            
+            let displayText = currentSentence.text.split(' ').map(word => {
+                const escapedWord = word.replace(/"/g, '&quot;');
+                return `<span class="word" onclick="showWordInfo('${escapedWord}')">${word}</span>`;
+            }).join(' ');
+            
+            sentenceDisplay.innerHTML = displayText;
+        }
+
+        function showWordInfo(word) {
+            const currentSentence = sentences[currentSentenceIndex];
+            const normalizedWord = word.toLowerCase().replace(/[.,!?]/g, '');
+            const gerund = currentSentence.gerunds.find(g => 
+                g.word.toLowerCase().replace(/[.,!?]/g, '') === normalizedWord
+            );
+            
+            if (gerund) {
+                showPopup(`
+                    <h3>Fiilimsi Bilgisi</h3>
+                    <div class="gerund-info">
+                        <div><strong>Sözcük:</strong> ${gerund.word}</div>
+                        <div onclick="toggleInfo(this, '${gerund.type}')"><strong>Tür:</strong> <span>Görmek için Tıkla</span></div>
+                        <div onclick="toggleInfo(this, '${gerund.suffix}')"><strong>Ek:</strong> <span>Görmek için Tıkla</span></div>
+                    </div>
+                `);
+            } else {
+                showPopup(`"${word}" bir fiilimsi değildir.`);
+            }
+        }
+
+        function toggleInfo(element, info) {
+            const span = element.querySelector('span');
+            if (span.textContent === 'Görmek için Tıkla') {
+                span.textContent = info;
+            } else {
+                span.textContent = 'Görmek için Tıkla';
+            }
+        }
+
+        function showPopup(message) {
+            document.getElementById('popupMessage').innerHTML = message;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function showNextSentence() {
+            if (sentences.length === 0) return;
+            currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
+            showSentence();
+        }
+
+        function showPreviousSentence() {
+            if (sentences.length === 0) return;
+            currentSentenceIndex = (currentSentenceIndex - 1 + sentences.length) % sentences.length;
+            showSentence();
+        }
+
+        function toggleSentenceForm(mode) {
+            const form = document.getElementById('sentenceForm');
+            const submitButton = document.getElementById('formSubmitButton');
+            
+            if (form.style.display === 'none' || formMode !== mode) {
+                form.style.display = 'block';
+                formMode = mode;
+                
+                if (mode === 'edit' && sentences.length > 0) {
+                    const currentSentence = sentences[currentSentenceIndex];
+                    document.getElementById('sentenceText').value = currentSentence.text;
+                    
+                    document.getElementById('gerundInputs').innerHTML = '';
+                    currentSentence.gerunds.forEach(gerund => {
+                        addGerundInput(gerund);
+                    });
+                    
+                    submitButton.textContent = 'Güncelle';
+                } else {
+                    clearSentenceForm();
+                    submitButton.textContent = 'Ekle';
+                }
+            } else {
+                form.style.display = 'none';
+            }
+        }
+
+        function addGerundInput(gerund = { word: '', type: '', suffix: '' }) {
+            const gerundInputs = document.getElementById('gerundInputs');
+            const newInput = document.createElement('div');
+            newInput.className = 'gerund-input';
+            newInput.innerHTML = `
+                <input type="text" class="gerundWord" placeholder="Fiilimsi sözcüğü" value="${gerund.word}">
+                <input type="text" class="gerundType" placeholder="Fiilimsi türü" value="${gerund.type}">
+                <input type="text" class="gerundSuffix" placeholder="Fiilimsi eki" value="${gerund.suffix}">
+                <button onclick="removeGerundInput(this)" class="remove-gerund">Kaldır</button>
+            `;
+            gerundInputs.appendChild(newInput);
+        }
+
+        function removeGerundInput(button) {
+            const gerundInputs = document.getElementById('gerundInputs');
+            if (gerundInputs.children.length > 1) {
+                button.parentElement.remove();
+            }
+        }
+
+        function submitSentenceForm() {
+            const text = document.getElementById('sentenceText').value.trim();
+            const gerundInputs = document.querySelectorAll('.gerund-input');
+            const gerunds = Array.from(gerundInputs).map(input => ({
+                word: input.querySelector('.gerundWord').value.trim(),
+                type: input.querySelector('.gerundType').value.trim(),
+                suffix: input.querySelector('.gerundSuffix').value.trim()
+            })).filter(gerund => gerund.word && gerund.type && gerund.suffix);
+
+            if (text && gerunds.length > 0) {
+                const newSentence = {
+                    id: formMode === 'edit' ? sentences[currentSentenceIndex].id : Date.now(),
+                    text: text,
+                    gerunds: gerunds
+                };
+
+                if (formMode === 'edit') {
+                    sentences[currentSentenceIndex] = newSentence;
+                } else {
+                    sentences.push(newSentence);
+                    currentSentenceIndex = sentences.length - 1;
+                }
+
+                showSentence();
+                toggleSentenceForm();
+                clearSentenceForm();
+            } else {
+                alert('Lütfen cümleyi ve en az bir fiilimsiyi eksiksiz doldurun.');
+            }
+        }
+
+        function clearSentenceForm() {
+            document.getElementById('sentenceText').value = '';
+            document.getElementById('gerundInputs').innerHTML = '';
+            addGerundInput();
+        }
+
+        function showDeleteConfirm() {
+            document.getElementById('deleteConfirmPopup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeDeleteConfirm() {
+            document.getElementById('deleteConfirmPopup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function deleteSentence() {
+            if (sentences.length === 0) return;
+            sentences.splice(currentSentenceIndex, 1);
+            if (currentSentenceIndex >= sentences.length) {
+                currentSentenceIndex = Math.max(0, sentences.length - 1);
+            }
+            showSentence();
+            closeDeleteConfirm();
+        }
+
+        function exportSentences() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(sentences, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "sentences.json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
+
+        function importSentences(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const importedSentences = JSON.parse(e.target.result);
+                        sentences = importedSentences;
+                        currentSentenceIndex = 0;
+                        showSentence();
+                        alert('Cümleler başarıyla içe aktarıldı.');
+                    } catch (error) {
+                        alert('Geçersiz dosya formatı. Lütfen geçerli bir JSON dosyası seçin.');
+                    }
+                };
+                reader.readAsText(file);
+            }
+        }
+
+        // Sayfa yüklendiğinde sentences.json dosyasını yükle
+        document.addEventListener('DOMContentLoaded', loadSentences);
+    </script>
+</body>
+</html>

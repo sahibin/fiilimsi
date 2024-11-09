@@ -1,0 +1,1 @@
+Akıllı tahta için fiilimsi uygulaması. İçe aktar butonuyla aynı klasördeki sentences.json dosyasını göstermeniz yeterlidir. index.html dosyasına tıklayın çalıştırın
